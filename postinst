@@ -1,0 +1,25 @@
+#!/bin/sh
+set -e
+
+# sign shim dylib if present
+if [ -f /usr/lib/instancex_container_shim.dylib ]; then
+  if command -v ldid >/dev/null 2>&1; then
+    ldid -S /usr/lib/instancex_container_shim.dylib || true
+  fi
+fi
+
+# create container base dir if missing
+if [ ! -d /var/mobile/InstanceX/containers ]; then
+  mkdir -p /var/mobile/InstanceX/containers
+  chown mobile:mobile /var/mobile/InstanceX/containers || true
+  chmod 755 /var/mobile/InstanceX/containers || true
+fi
+
+# respring SpringBoard
+if command -v sbreload >/dev/null 2>&1; then
+  sbreload
+else
+  killall -9 SpringBoard || true
+fi
+
+exit 0
