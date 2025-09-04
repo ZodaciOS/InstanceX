@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "">
+<plist version="1.0">
+<dict>
+  <key>CFBundleIdentifier</key><string>com.yourname.instancex.prefs</string>
+  <key>CFBundleName</key><string>InstanceX</string>
+  <key>CFBundleVersion</key><string>1.0</key>
+  <key>CFBundleExecutable</key><string>InstanceXPrefs</string>
+</dict>
+</plist>
