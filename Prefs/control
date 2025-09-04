@@ -1,0 +1,8 @@
+Package: com.zodacios.instancex.prefs
+Name: InstanceX Preferences
+Depends: preferenceloader
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: InstanceX preference bundle
+Maintainer: ZodaciOS
+Section: Preferences
