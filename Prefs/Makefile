@@ -1,5 +1,5 @@
 ARCHS = arm64 arm64e
-TARGET := iphone:clang:15.0:15.8.4
+TARGET := iphone:clang:15.0:15.0
 THEOS_PACKAGE_SCHEME = rootless
 
 BUNDLE_NAME = InstanceXPrefs
