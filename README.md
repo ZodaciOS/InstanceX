@@ -1,8 +1,13 @@
 # InstanceX
 Run several instances of one application using libCrane technology
 
-**CAUTION ⚠️: THIS TWEAK IS CURRENTLY IN DEVELOPMENT. THIS HAS ONLY BEEN SUPPORTED TO WORK ON IOS 15 iPAD'S. I DO NOT RECOMMEND RUNNING ON LOWER OR HIGHER VERSIONS. I AM NOT RESPONSIBLE FOR ANY BOOTLOOPS, CRASHES, OR ANY TECHNICAL ISSUE.
+> [!WARNING]  
+> This tweak only supports iPads running iOS 15. We are not responsible for any bootloops, crashes, loss of data, etc.
 
 # Stability
 
-Coming soon
+Stability will be tested soon.
+
+# Building
+
+Not done
