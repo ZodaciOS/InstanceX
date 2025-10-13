@@ -1,17 +1,21 @@
+include $(THEOS)/makefiles/common.mk
+
 ARCHS = arm64 arm64e
-TARGET := iphone:clang:15.0:15.0
-THEOS_PACKAGE_SCHEME = rootless
+TARGET := iphone:clang:latest:15.0
+
 INSTALL_TARGET_PROCESSES = SpringBoard
 
 TWEAK_NAME = InstanceX
-InstanceX_FILES = Tweak.xm SBMenuHooks.xm InstanceManager.mm ContainerManager.mm InstanceLayout.mm
-InstanceX_CFLAGS = -fobjc-arc
-InstanceX_LDFLAGS += -Wl,-undefined,dynamic_lookup
-InstanceX_PRIVATE_FRAMEWORKS = FrontBoardServices BackBoardServices SpringBoardServices
-InstanceX_FRAMEWORKS = UIKit Foundation
-InstanceX_LIBRARIES = objc
+InstanceX_FILES = \
+	Tweak.xm \
+	lib/IXContainerManager.mm \
+	lib/IXKeychainManager.mm \
+	lib/IXLayoutManager.mm
 
-SUBPROJECTS += prefs ContainerShim
-include $(THEOS)/makefiles/common.mk
+InstanceX_CFLAGS = -fobjc-arc
+InstanceX_FRAMEWORKS = UIKit Foundation Security
+
 include $(THEOS_MAKE_PATH)/tweak.mk
+
+SUBPROJECTS += prefs
 include $(THEOS_MAKE_PATH)/aggregate.mk
